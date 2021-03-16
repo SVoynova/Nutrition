@@ -1,0 +1,89 @@
+﻿@model Nutrition.Models.Meal
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Meal</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="MealCalories" class="control-label"></label>
+                <input asp-for="MealCalories" class="form-control" />
+                <span asp-validation-for="MealCalories" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MealProtein" class="control-label"></label>
+                <input asp-for="MealProtein" class="form-control" />
+                <span asp-validation-for="MealProtein" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MealCarbohydrates" class="control-label"></label>
+                <input asp-for="MealCarbohydrates" class="form-control" />
+                <span asp-validation-for="MealCarbohydrates" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MealFat" class="control-label"></label>
+                <input asp-for="MealFat" class="form-control" />
+                <span asp-validation-for="MealFat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MealFibre" class="control-label"></label>
+                <input asp-for="MealFibre" class="form-control" />
+                <span asp-validation-for="MealFibre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MealSugars" class="control-label"></label>
+                <input asp-for="MealSugars" class="form-control" />
+                <span asp-validation-for="MealSugars" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MealSodium" class="control-label"></label>
+                <input asp-for="MealSodium" class="form-control" />
+                <span asp-validation-for="MealSodium" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Potassium" class="control-label"></label>
+                <input asp-for="Potassium" class="form-control" />
+                <span asp-validation-for="Potassium" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cholesterol" class="control-label"></label>
+                <input asp-for="Cholesterol" class="form-control" />
+                <span asp-validation-for="Cholesterol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VitaminA" class="control-label"></label>
+                <input asp-for="VitaminA" class="form-control" />
+                <span asp-validation-for="VitaminA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VitaminC" class="control-label"></label>
+                <input asp-for="VitaminC" class="form-control" />
+                <span asp-validation-for="VitaminC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Calcium" class="control-label"></label>
+                <input asp-for="Calcium" class="form-control" />
+                <span asp-validation-for="Calcium" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

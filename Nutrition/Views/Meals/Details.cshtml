@@ -1,0 +1,90 @@
+﻿@model Nutrition.Models.Meal
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Meal</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MealCalories)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MealCalories)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MealProtein)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MealProtein)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MealCarbohydrates)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MealCarbohydrates)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MealFat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MealFat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MealFibre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MealFibre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MealSugars)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MealSugars)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MealSodium)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MealSodium)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Potassium)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Potassium)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cholesterol)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cholesterol)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VitaminA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VitaminA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VitaminC)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VitaminC)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Calcium)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Calcium)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

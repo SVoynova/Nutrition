@@ -1,0 +1,101 @@
+﻿@model IEnumerable<Nutrition.Models.Meal>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MealCalories)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MealProtein)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MealCarbohydrates)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MealFat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MealFibre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MealSugars)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MealSodium)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Potassium)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cholesterol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VitaminA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VitaminC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Calcium)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MealCalories)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MealProtein)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MealCarbohydrates)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MealFat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MealFibre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MealSugars)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MealSodium)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Potassium)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cholesterol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VitaminA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VitaminC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Calcium)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
