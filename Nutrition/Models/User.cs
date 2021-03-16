@@ -28,7 +28,7 @@ namespace Nutrition.Models
         /// <summary>
         /// User's sex
         /// </summary>
-        private string sex;
+        public string sex;
         public string Sex
         {
             get { return sex; }
@@ -86,24 +86,6 @@ namespace Nutrition.Models
             set { activityLevel = value; }
         }
 
-        /// <summary>
-        /// User's Basal Metabolict calculated using the Harris-Benedict equation
-        /// </summary>
-        private int bmr;
-        public int BMR
-        {
-            get { return bmr; }
-            set
-            {
-                int sexCoefficent = 0;
-                switch (sex)
-                {
-                    case "female": sexCoefficent = -161; break;
-                    case "male": sexCoefficent = 5; break;
-                }
-                bmr = (int)(10 * currentWeight + 6.25 * height - 5 * age + sexCoefficent);
-            }
-        }
 
         /// <summary>
         /// User's preference on the intensity of the plan
@@ -117,25 +99,45 @@ namespace Nutrition.Models
         }
 
         /// <summary>
+        /// User's Basal Metabolict calculated using the Harris-Benedict equation
+        /// </summary>
+        private int bmr; 
+        public int BMR
+        {
+            get 
+            {
+                int sexCoefficent = 0;
+                switch (sex)
+                {
+                    case "female": sexCoefficent = -161; break;
+                    case "male": sexCoefficent = 5; break;
+                }
+                
+                bmr = Convert.ToInt32((10 * currentWeight) + (6.25 * height) - (5 * age) + sexCoefficent);
+                return bmr;
+            }
+        }
+
+
+        /// <summary>
         /// User's estimated daily calorie needs
         /// </summary>
         private int dailyCalorieNeeds;
         public int DailyCalorieNeeds
         {
-            get { return dailyCalorieNeeds; }
-            set
+            get
             {
                 double activityCoefficient = 0;
-                switch (intensityOfThePlan)
+                switch (activityLevel)
                 {
                     case "Sedentary": activityCoefficient = 1.2; break;
                     case "Lightly active": activityCoefficient = 1.375; break;
                     case "Moderately active": activityCoefficient = 1.55; break;
                     case "Very active": activityCoefficient = 1.725; break;
-                    case "Extra active": activityCoefficient = 1.9; break;
+                    case "Extra active": activityCoefficient = 1.9; break; 
                 }
-                dailyCalorieNeeds = (int)(bmr * activityCoefficient);
-
+                dailyCalorieNeeds = Convert.ToInt32(bmr * activityCoefficient);
+                return dailyCalorieNeeds;
             }
         }
 
@@ -156,10 +158,11 @@ namespace Nutrition.Models
         private int carbohydratesPercentage;
         public int CarbohydratesPercentage
         {
-            get { return carbohydratesPercentage; }
-            set
+            
+            get
             {
-                carbohydratesPercentage = value;
+                carbohydratesPercentage = 50;
+                return carbohydratesPercentage;
             }
         }
 
@@ -169,10 +172,10 @@ namespace Nutrition.Models
         private int carbohydrates;
         public int Carbohydrates
         {
-            get { return carbohydrates; }
-            set
+            get
             {
                 carbohydrates = (carbohydratesPercentage / 100) * dailyCalorieNeeds / 4;
+                return carbohydrates;
             }
         }
 
@@ -182,8 +185,11 @@ namespace Nutrition.Models
         private int proteinPercentage;
         public int ProteinPercentage
         {
-            get { return proteinPercentage; }
-            set { proteinPercentage = value; }
+            get 
+            { 
+                proteinPercentage = 30;
+                return proteinPercentage;
+            }
         }
         /// <summary>
         /// The daily consumtion of protein in grams, based on the percentage of daily protein
@@ -191,10 +197,10 @@ namespace Nutrition.Models
         private int protein;
         public int Protein
         {
-            get { return protein; }
-            set
+            get
             {
                 protein = (proteinPercentage / 100) * dailyCalorieNeeds / 4;
+                return protein;
             }
         }
 
@@ -204,8 +210,11 @@ namespace Nutrition.Models
         private int fatPercentage;
         public int FatPercentage
         {
-            get { return fatPercentage; }
-            set { fatPercentage = value; }
+            get 
+            { 
+                fatPercentage = 20;
+                return fatPercentage;
+            }
         }
 
         /// <summary>
@@ -214,10 +223,10 @@ namespace Nutrition.Models
         private int fats;
         public int Fats
         {
-            get { return fats; }
-            set
+            get
             {
-                fats = ((fatPercentage / 100) * dailyCalorieNeeds) / 9;
+                fats = Convert.ToInt32(((fatPercentage / 100) * dailyCalorieNeeds) / 9);
+                return fats;
             }
         }
 
@@ -225,71 +234,103 @@ namespace Nutrition.Models
 
         public int DailyFibre
         {
-            get { return dailyFibre; }
-            set { dailyFibre = value; }
+            get 
+            {
+                dailyFibre = Convert.ToInt32(dailyCalorieNeeds * 0.014);
+                return dailyFibre;
+            }
         }
 
         private int dailySugars;
 
         public int DailySugars
         {
-            get { return dailySugars; }
-            set { dailySugars = value; }
+            get 
+            {
+                switch (sex)
+                {
+                    case "female": return 24; 
+                    case "male": return 36;
+                }
+                return 0;
+            }
         }
 
-        private int dailySodium;
+        private double dailySodium = 2.3;
 
-        public int DailySodium
+        public double DailySodium
         {
-            get { return dailySodium; }
-            set { dailySodium = value; }
+            get 
+            {
+                return dailySodium; 
+            }
         }
 
-        private int dailyPotassium;
+        private double dailyPotassium = 3.5;
 
-        public int DailyPotassium
+        public double DailyPotassium
         {
-            get { return dailyPotassium; }
-            set { dailyPotassium = value; }
+            get 
+            { 
+                return dailyPotassium; 
+            }
         }
 
-        private int dailyCholesterol;
+        private double dailyCholesterol = 0.3;
 
-        public int DailyCholesterol
+        public double DailyCholesterol
         {
             get { return dailyCholesterol; }
-            set { dailyCholesterol = value; }
         }
 
-        private int dailyVitaminA;
+        private double dailyVitaminA ;
 
-        public int DailyVitaminA
+        public double DailyVitaminA
         {
-            get { return dailyVitaminA; }
+            get 
+            {
+                switch (sex)
+                {
+                    case "female": return 0.0006;
+                    case "male": return 0.0007;
+                }
+                return 0;
+            }
             set { dailyVitaminA = value; }
         }
 
-        private int dailyVitaminC;
+        private double dailyVitaminC;
 
-        public int DailyVitaminC
+        public double DailyVitaminC
         {
-            get { return dailyVitaminC; }
-            set { dailyVitaminC = value; }
+            get 
+            {
+                if (age > 16)
+                {
+                    switch (sex)
+                    {
+                        case "female": return 0.075;
+                        case "male": return 0.09;
+                    }
+                }
+                return 0.05; //for children 
+            }
         }
 
-        private int dailyCalcium;
+        private double dailyCalcium = 0.6;
 
-        public int DailyCalcium
+        public double DailyCalcium
         {
-            get { return dailyCalcium; }
-            set { dailyCalcium = value; }
+            get 
+            { 
+                return dailyCalcium; 
+            }
         }
 
         private double dailyWater;
         public double DailyWater
         {
-            get { return dailyWater; }
-            set { dailyWater = 0.033 * CurrentWeight; }
+            get { return  0.033 * CurrentWeight; }
         }
 
         public User()

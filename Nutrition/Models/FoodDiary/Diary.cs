@@ -41,7 +41,11 @@ namespace Nutrition.Models
         public int TotalCalories
         {
             get { return totalCalories; }
-            set { totalCalories = value; }
+            set { totalCalories = 
+                    breakfast.MealCalories +
+                    lunch.MealCalories +
+                    dinner.MealCalories +
+                    snacks.MealCalories; }
         }
 
         /// <summary>
@@ -51,44 +55,72 @@ namespace Nutrition.Models
         public int TotalProtein
         {
             get { return totalProtein; }
-            set { totalProtein = value; }
+            set { totalProtein = 
+                    breakfast.MealProtein +
+                    lunch.MealProtein + 
+                    dinner.MealProtein + 
+                    snacks.MealProtein; }
         }
 
         private int totalCarbohydrates;
         public int TotalCarbohydrates
         {
             get { return totalCarbohydrates; }
-            set { totalCarbohydrates = value; }
+            set { totalCarbohydrates = 
+                    breakfast.MealCarbohydrates + 
+                    lunch.MealCarbohydrates + 
+                    dinner.MealCarbohydrates + 
+                    snacks.MealCarbohydrates; }
         }
 
         private int totalFat;
         public int TotalFat
         {
             get { return totalFat; }
-            set { totalFat = value; }
+            set 
+            {
+                totalFat =
+                  breakfast.MealFat +
+                  lunch.MealFat +
+                  dinner.MealFat +
+                  snacks.MealFat;
+            }
         }
 
-        private int mealFibre;
+        private int totalFibre;
         public int TotalFibre
         {
-            get { return mealFibre; }
-            set { mealFibre = value; }
+            get { return totalFibre; }
+            set { totalFibre =
+                    breakfast.MealFibre +
+                    lunch.MealFibre +
+                    dinner.MealFibre +
+                    snacks.MealFibre;
+            }
         }
 
         private int totalSugars;
-
         public int TotalSugars
         {
             get { return totalSugars; }
-            set { totalSugars = value; }
+            set { totalSugars =
+                    breakfast.MealSugars +
+                    lunch.MealSugars +
+                    dinner.MealSugars +
+                    snacks.MealSugars;
+            }
         }
 
         private int totalSodium;
-
         public int TotalSodium
         {
             get { return totalSodium; }
-            set { totalSodium = value; }
+            set { totalSodium =
+                    breakfast.MealSodium +
+                    lunch.MealSodium +
+                    dinner.MealSodium +
+                    snacks.MealSodium;
+            }
         }
 
 
@@ -96,7 +128,12 @@ namespace Nutrition.Models
         public int TotalPotassium
         {
             get { return totalPotassium; }
-            set { totalPotassium = value; }
+            set { totalPotassium =
+                    breakfast.Potassium +
+                    lunch.Potassium +
+                    dinner.Potassium+
+                    snacks.Potassium;
+            }
         }
 
 
@@ -104,7 +141,12 @@ namespace Nutrition.Models
         public int TotalCholesterol
         {
             get { return totalCholesterol; }
-            set { totalCholesterol = value; }
+            set { totalCholesterol =
+                    breakfast.Cholesterol +
+                    lunch.Cholesterol +
+                    dinner.Cholesterol +
+                    snacks.Cholesterol;
+            }
         }
 
 
@@ -112,7 +154,12 @@ namespace Nutrition.Models
         public int TotalVitaminA
         {
             get { return totalVitaminA; }
-            set { totalVitaminA = value; }
+            set { totalVitaminA =
+                    breakfast.VitaminA +
+                    lunch.VitaminA +
+                    dinner.VitaminA +
+                    snacks.VitaminA;
+            }
         }
 
 
@@ -120,7 +167,12 @@ namespace Nutrition.Models
         public int TotalVitaminC
         {
             get { return totalVitaminC; }
-            set { totalVitaminC = value; }
+            set { totalVitaminC =
+                    breakfast.VitaminC +
+                    lunch.VitaminC +
+                    dinner.VitaminC+
+                    snacks.VitaminC;
+            }
         }
 
 
@@ -128,7 +180,12 @@ namespace Nutrition.Models
         public int TotalCalcium
         {
             get { return totalCalcium; }
-            set { totalCalcium = value; }
+            set { totalCalcium =
+                    breakfast.Calcium +
+                    lunch.Calcium +
+                    dinner.Calcium +
+                    snacks.Calcium;
+            }
         }
 
         public Diary()

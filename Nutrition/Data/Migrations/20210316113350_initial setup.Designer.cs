@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Nutrition.Data;
 
 namespace Nutrition.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210316113350_initial setup")]
+    partial class initialsetup
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -399,11 +401,53 @@ namespace Nutrition.Data.Migrations
                     b.Property<int>("Age")
                         .HasColumnType("int");
 
+                    b.Property<int>("BMR")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Carbohydrates")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CarbohydratesPercentage")
+                        .HasColumnType("int");
+
                     b.Property<int>("CurrentWeight")
                         .HasColumnType("int");
 
-                    b.Property<double>("DailyVitaminA")
+                    b.Property<int>("DailyCalcium")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DailyCalorieNeeds")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DailyCholesterol")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DailyFibre")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DailyPotassium")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DailySodium")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DailySugars")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DailyVitaminA")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DailyVitaminC")
+                        .HasColumnType("int");
+
+                    b.Property<double>("DailyWater")
                         .HasColumnType("float");
+
+                    b.Property<int>("FatPercentage")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Fats")
+                        .HasColumnType("int");
 
                     b.Property<int>("GoalWeight")
                         .HasColumnType("int");
@@ -416,6 +460,12 @@ namespace Nutrition.Data.Migrations
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Protein")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProteinPercentage")
+                        .HasColumnType("int");
 
                     b.Property<string>("Sex")
                         .HasColumnType("nvarchar(max)");

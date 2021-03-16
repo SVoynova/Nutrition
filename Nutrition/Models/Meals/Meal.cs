@@ -8,6 +8,8 @@ namespace Nutrition.Models
     public class Meal
     {
         public int Id { get; set; }
+
+
         /// <summary>
         /// Breakfast entry 
         /// </summary>
@@ -19,7 +21,7 @@ namespace Nutrition.Models
         }
 
         /// <summary>
-        /// Calories consumed for breakfast 
+        /// Calories consumed for meal
         /// </summary>
         private int mealCalories;
         public int MealCalories
