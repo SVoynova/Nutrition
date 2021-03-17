@@ -154,13 +154,12 @@ namespace Nutrition.Models
         /// <summary>
         /// The percentage of carbohydrates from the daily calorie needs
         /// </summary>
-        private int carbohydratesPercentage;
+        private int carbohydratesPercentage = 50;
         public int CarbohydratesPercentage
         {
             
             get
             {
-                carbohydratesPercentage = 50;
                 return carbohydratesPercentage;
             }
         }
@@ -173,7 +172,7 @@ namespace Nutrition.Models
         {
             get
             {
-                carbohydrates = (carbohydratesPercentage / 100) * dailyCalorieNeeds / 4;
+                carbohydrates = Convert.ToInt32(0.5 * dailyCalorieNeeds / 4 );
                 return carbohydrates;
             }
         }
@@ -181,12 +180,11 @@ namespace Nutrition.Models
         /// <summary>
         /// The percentage of protein from the daily calorie needs
         /// </summary>
-        private int proteinPercentage;
+        private int proteinPercentage = 30;
         public int ProteinPercentage
         {
             get 
             { 
-                proteinPercentage = 30;
                 return proteinPercentage;
             }
         }
@@ -198,7 +196,7 @@ namespace Nutrition.Models
         {
             get
             {
-                protein = (proteinPercentage / 100) * dailyCalorieNeeds / 4;
+                protein = Convert.ToInt32(0.3 * dailyCalorieNeeds / 4);
                 return protein;
             }
         }
@@ -206,12 +204,11 @@ namespace Nutrition.Models
         /// <summary>
         /// The percentage of fats from the daily calorie needs
         /// </summary>
-        private int fatPercentage;
+        private int fatPercentage = 20;
         public int FatPercentage
         {
             get 
             { 
-                fatPercentage = 20;
                 return fatPercentage;
             }
         }
@@ -224,7 +221,7 @@ namespace Nutrition.Models
         {
             get
             {
-                fats = Convert.ToInt32(((fatPercentage / 100) * dailyCalorieNeeds) / 9);
+                fats = Convert.ToInt32(0.2 * DailyCalorieNeeds / 9);
                 return fats;
             }
         }
