@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Nutrition.Models
 {
     public class User
     {
-
+        /// <summary>
+        /// ID of user
+        /// </summary>
         private int id;
         public int Id
         {
@@ -167,7 +166,7 @@ namespace Nutrition.Models
         }
 
         /// <summary>
-        /// The daily consumtion of carbohydrates in grams, based on the percentage of daily carbohydrates
+        /// The daily consumption of carbohydrates in grams, based on the percentage of daily carbohydrates
         /// </summary>
         private int carbohydrates;
         public int Carbohydrates
@@ -192,7 +191,7 @@ namespace Nutrition.Models
             }
         }
         /// <summary>
-        /// The daily consumtion of protein in grams, based on the percentage of daily protein
+        /// The daily consumption of protein in grams, based on the percentage of daily protein
         /// </summary>
         private int protein;
         public int Protein
@@ -218,7 +217,7 @@ namespace Nutrition.Models
         }
 
         /// <summary>
-        /// The daily consumtion of fats in grams, based on the percentage of daily fats
+        /// The daily consumption of fats in grams, based on the percentage of daily fats
         /// </summary>
         private int fats;
         public int Fats
@@ -230,6 +229,9 @@ namespace Nutrition.Models
             }
         }
 
+        /// <summary>
+        /// The daily consumption of fiber in grams, based on the calorie needs
+        /// </summary>
         private int dailyFibre;
 
         public int DailyFibre
@@ -241,6 +243,9 @@ namespace Nutrition.Models
             }
         }
 
+        /// <summary>
+        /// The daily sugar intake in grams, based on gender
+        /// </summary>
         private int dailySugars;
 
         public int DailySugars
@@ -256,6 +261,9 @@ namespace Nutrition.Models
             }
         }
 
+        /// <summary>
+        /// The daily consumption of sodium in milligrams
+        /// </summary>
         private double dailySodium = 2.3;
 
         public double DailySodium
@@ -266,6 +274,9 @@ namespace Nutrition.Models
             }
         }
 
+        /// <summary>
+        /// The daily consumption of potassium in milligrams
+        /// </summary>
         private double dailyPotassium = 3.5;
 
         public double DailyPotassium
@@ -276,6 +287,9 @@ namespace Nutrition.Models
             }
         }
 
+        /// <summary>
+        /// The daily consumption of cholesterom in grams
+        /// </summary>
         private double dailyCholesterol = 0.3;
 
         public double DailyCholesterol
@@ -283,6 +297,9 @@ namespace Nutrition.Models
             get { return dailyCholesterol; }
         }
 
+        /// <summary>
+        /// The daily consumption of vitamin A in grams, based on the gender of the user
+        /// </summary>
         private double dailyVitaminA ;
 
         public double DailyVitaminA
@@ -299,6 +316,9 @@ namespace Nutrition.Models
             set { dailyVitaminA = value; }
         }
 
+        /// <summary>
+        /// The daily consumption of vitamin C in grams, based on the gender of the user
+        /// </summary>
         private double dailyVitaminC;
 
         public double DailyVitaminC
@@ -317,6 +337,9 @@ namespace Nutrition.Models
             }
         }
 
+        /// <summary>
+        /// The daily consumption of calcium A in grams
+        /// </summary>
         private double dailyCalcium = 0.6;
 
         public double DailyCalcium
@@ -327,6 +350,9 @@ namespace Nutrition.Models
             }
         }
 
+        /// <summary>
+        /// The daily consumption of water in liters, based on the user's goal weight
+        /// </summary>
         private double dailyWater;
         public double DailyWater
         {

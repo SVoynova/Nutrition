@@ -50,8 +50,6 @@ namespace Nutrition.Controllers
         }
 
         // POST: Users/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Sex,Age,Height,CurrentWeight,GoalWeight,ActivityLevel,BMR,IntensityOfThePlan,DailyCalorieNeeds,CarbohydratesPercentage,Carbohydrates,ProteinPercentage,Protein,FatPercentage,Fats,DailyFibre,DailySugars,DailySodium,DailyPotassium,DailyCholesterol,DailyVitaminA,DailyVitaminC,DailyCalcium,DailyWater")] User user)
@@ -82,8 +80,6 @@ namespace Nutrition.Controllers
         }
 
         // POST: Users/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Sex,Age,Height,CurrentWeight,GoalWeight,ActivityLevel,BMR,IntensityOfThePlan,DailyCalorieNeeds,CarbohydratesPercentage,Carbohydrates,ProteinPercentage,Protein,FatPercentage,Fats,DailyFibre,DailySugars,DailySodium,DailyPotassium,DailyCholesterol,DailyVitaminA,DailyVitaminC,DailyCalcium,DailyWater")] User user)
