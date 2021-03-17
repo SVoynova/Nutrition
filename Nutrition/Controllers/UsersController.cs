@@ -52,6 +52,7 @@ namespace Nutrition.Controllers
         }
 
         // POST: Users/Create
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Sex,Age,Height,CurrentWeight,GoalWeight,ActivityLevel,BMR,IntensityOfThePlan,DailyCalorieNeeds,CarbohydratesPercentage,Carbohydrates,ProteinPercentage,Protein,FatPercentage,Fats,DailyFibre,DailySugars,DailySodium,DailyPotassium,DailyCholesterol,DailyVitaminA,DailyVitaminC,DailyCalcium,DailyWater")] User user)
@@ -66,6 +67,7 @@ namespace Nutrition.Controllers
         }
 
         // GET: Users/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -82,6 +84,7 @@ namespace Nutrition.Controllers
         }
 
         // POST: Users/Edit/5
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Sex,Age,Height,CurrentWeight,GoalWeight,ActivityLevel,BMR,IntensityOfThePlan,DailyCalorieNeeds,CarbohydratesPercentage,Carbohydrates,ProteinPercentage,Protein,FatPercentage,Fats,DailyFibre,DailySugars,DailySodium,DailyPotassium,DailyCholesterol,DailyVitaminA,DailyVitaminC,DailyCalcium,DailyWater")] User user)
@@ -115,6 +118,7 @@ namespace Nutrition.Controllers
         }
 
         // GET: Users/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -133,6 +137,7 @@ namespace Nutrition.Controllers
         }
 
         // POST: Users/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
