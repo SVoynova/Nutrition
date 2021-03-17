@@ -135,10 +135,23 @@ namespace Nutrition.Models
                     case "Very active": activityCoefficient = 1.725; break;
                     case "Extra active": activityCoefficient = 1.9; break; 
                 }
-                dailyCalorieNeeds = (int)Math.Ceiling(bmr * activityCoefficient);
+
+                int caloriesToReachGoal = 0;
+                switch (intensityOfThePlan)
+                {
+                    case "Lose 0.5kg per week": caloriesToReachGoal = -500; break;
+                    case "Lose 1kg per week": caloriesToReachGoal= -1000; break;
+                    case "Maintain current weight": caloriesToReachGoal = 0; break;
+                    case "Gain 0.5kg per week": caloriesToReachGoal = 500; break;
+                    case "Gain 1kg per week": caloriesToReachGoal = 1000; break;
+                }
+                dailyCalorieNeeds = (int)Math.Ceiling(bmr * activityCoefficient + caloriesToReachGoal);
                 return dailyCalorieNeeds;
             }
         }
+
+
+        
 
         /*
         Calculating Daily Calorie Needs
