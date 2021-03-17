@@ -135,7 +135,7 @@ namespace Nutrition.Models
                     case "Very active": activityCoefficient = 1.725; break;
                     case "Extra active": activityCoefficient = 1.9; break; 
                 }
-                dailyCalorieNeeds = Convert.ToInt32(bmr * activityCoefficient);
+                dailyCalorieNeeds = (int)Math.Ceiling(bmr * activityCoefficient);
                 return dailyCalorieNeeds;
             }
         }
@@ -172,7 +172,7 @@ namespace Nutrition.Models
         {
             get
             {
-                carbohydrates = Convert.ToInt32(0.5 * dailyCalorieNeeds / 4 );
+                carbohydrates = (int)Math.Ceiling(0.5 * dailyCalorieNeeds / 4 );
                 return carbohydrates;
             }
         }
@@ -180,7 +180,7 @@ namespace Nutrition.Models
         /// <summary>
         /// The percentage of protein from the daily calorie needs
         /// </summary>
-        private int proteinPercentage = 30;
+        private int proteinPercentage = 25;
         public int ProteinPercentage
         {
             get 
@@ -196,7 +196,7 @@ namespace Nutrition.Models
         {
             get
             {
-                protein = Convert.ToInt32(0.3 * dailyCalorieNeeds / 4);
+                protein = (int)Math.Ceiling(0.25 * dailyCalorieNeeds / 4);
                 return protein;
             }
         }
@@ -204,7 +204,7 @@ namespace Nutrition.Models
         /// <summary>
         /// The percentage of fats from the daily calorie needs
         /// </summary>
-        private int fatPercentage = 20;
+        private int fatPercentage = 25;
         public int FatPercentage
         {
             get 
@@ -221,7 +221,7 @@ namespace Nutrition.Models
         {
             get
             {
-                fats = Convert.ToInt32(0.2 * DailyCalorieNeeds / 9);
+                fats = (int)Math.Ceiling(0.25 * DailyCalorieNeeds / 9);
                 return fats;
             }
         }
@@ -235,7 +235,7 @@ namespace Nutrition.Models
         {
             get 
             {
-                dailyFibre = Convert.ToInt32(dailyCalorieNeeds * 0.014);
+                dailyFibre = (int)Math.Ceiling(dailyCalorieNeeds * 0.014);
                 return dailyFibre;
             }
         }
@@ -243,7 +243,7 @@ namespace Nutrition.Models
         /// <summary>
         /// The daily sugar intake in grams, based on gender
         /// </summary>
-        private int dailySugars;
+        //private int dailySugars;
 
         public int DailySugars
         {
@@ -316,7 +316,7 @@ namespace Nutrition.Models
         /// <summary>
         /// The daily consumption of vitamin C in grams, based on the gender of the user
         /// </summary>
-        private double dailyVitaminC;
+        //private double dailyVitaminC;
 
         public double DailyVitaminC
         {
@@ -330,7 +330,8 @@ namespace Nutrition.Models
                         case "male": return 0.09;
                     }
                 }
-                return 0.05; //for children 
+                return 0.05;
+                    
             }
         }
 
@@ -353,7 +354,11 @@ namespace Nutrition.Models
         private double dailyWater;
         public double DailyWater
         {
-            get { return  0.033 * CurrentWeight; }
+            get 
+            {
+                dailyWater = Math.Round(0.033 * CurrentWeight, 2);
+                return dailyWater;
+            }
         }
 
         public User()
