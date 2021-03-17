@@ -3,31 +3,88 @@
 }
 
 
-<!--
-<div class="mySlides display-container center">
-    <img src="/imeges/diary.jpg" style="width:100%">
-    <div class="display-bottommiddle container text-white padding-32 hide-small">
-        <h3>Write a diary</h3>
-    </div>
-</div>
-<div class="mySlides display-container center">
-    <img src="/imeges/nutrition.jpg" style="width:100%">
-    <div class="display-bottommiddle container text-white padding-32 hide-small">
-        <h3>Nutritions contained in food</h3>
-    </div>
-</div>
--->
-
 <div class="text-center">
-    <h1 class="display-4">Food and Nutrition</h1>
+    <!--<h1 class="display-4">Food and Nutrition</h1>
 
-    <div class="mySlides display-container center">
+        <div>
+            <div id="carousel" class="carousel slide">
+                <ol class="carousel-indicators">
+                    <il data-target="#carousel" data-slide-to="0" class="active"></il>
+                    <il data-target="#carousel" data-slide-to="1"></il>
+                    <il data-target="#carousel" data-slide-to="2"></il>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="nav-item active">
+                        <img src="~/imeges/meal.jpg" style="width:100%">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h4>This is image 1</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <img src="~/imeges/nutrition.jpg" style="width:100%">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h4>This is image 2</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <img src="~/imeges/diary.jpg" style="width:100%">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h4>This is image 3</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="carousel" class="carousel-control-prev-icon" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="carousel" class="carousel-control-next-icon" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+        <script>
+            $("#carousel").carousel(
+                {
+                    interval: 2000
+                });
+        </script>
+    </div>
+        -->
+    <div class="display-container center">
         <img src="/imeges/meal.jpg" style="width:100%">
-        <div class="display-bottommiddle container text-white padding-32 hide-small">
-            <h3>Add your meals</h3>
+        <div class="text-block">
+            <!--<div class="display-bottommiddle container text-white padding-32 hide-small">-->
+            <h1 class="display-4" >Food and Nutrition</h1>
         </div>
     </div>
+    <style>
+        .display-container {
+            position: relative;
+        }
 
+        img {
+            border-radius: 10px;
+        }
+
+        .text-block {
+            position: absolute;
+            display: inline-block;
+            top: 20px;
+            left: 20px;
+            background-color: azure;
+            color: black;
+            box-shadow: 0 0 10px 3px rgba(100, 100, 100, 0.7);
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 10px;
+        }
+    </style>
     <br>
     <p>
         In theory, keeping a food diary is a great idea, but how many of us have failed after
