@@ -34,92 +34,99 @@
                 @Html.DisplayNameFor(model => model.ActivityLevel)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.BMR)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.IntensityOfThePlan)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DailyCalorieNeeds)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CarbohydratesPercentage)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Carbohydrates)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProteinPercentage)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Protein)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FatPercentage)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fats)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DailyFibre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DailySugars)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DailySodium)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DailyPotassium)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DailyCholesterol)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DailyVitaminA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DailyVitaminC)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DailyCalcium)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DailyWater)
-            </th>
+            <!--
+    <th>
+        @Html.DisplayNameFor(model => model.BMR)
+    </th>
+
+
+    <th>
+        @Html.DisplayNameFor(model => model.DailyCalorieNeeds)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.CarbohydratesPercentage)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.Carbohydrates)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.ProteinPercentage)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.Protein)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.FatPercentage)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.Fats)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.DailyFibre)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.DailySugars)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.DailySodium)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.DailyPotassium)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.DailyCholesterol)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.DailyVitaminA)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.DailyVitaminC)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.DailyCalcium)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.DailyWater)
+    </th>
+    -->
             <th></th>
         </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sex)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Age)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Height)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CurrentWeight)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GoalWeight)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ActivityLevel)
-            </td>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sex)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Height)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CurrentWeight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GoalWeight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ActivityLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IntensityOfThePlan)
+                </td>
+
+                <!--
             <td>
                 @Html.DisplayFor(modelItem => item.BMR)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IntensityOfThePlan)
-            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.DailyCalorieNeeds)
             </td>
@@ -168,12 +175,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.DailyWater)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    -->
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
