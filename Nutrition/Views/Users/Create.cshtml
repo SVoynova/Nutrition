@@ -7,53 +7,72 @@
 <h1>Create</h1>
 
 <h4>User</h4>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
+                <label asp-for="Name" class="control-label">Name</label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Sex" class="control-label"></label>
-                <input asp-for="Sex" class="form-control" />
+            <div id="submit" class="form-group">
+                <label asp-for="Sex" class="control-label">Sex</label>
+                <select asp-for="Sex" class="form-control">
+                    <option selected disabled hidden style='display: none' value=''></option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
                 <span asp-validation-for="Sex" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Age" class="control-label"></label>
+                <label asp-for="Age" class="control-label">Age</label>
                 <input asp-for="Age" class="form-control" />
                 <span asp-validation-for="Age" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Height" class="control-label"></label>
+                <label asp-for="Height" class="control-label">Height</label>
                 <input asp-for="Height" class="form-control" />
                 <span asp-validation-for="Height" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CurrentWeight" class="control-label"></label>
+                <label asp-for="CurrentWeight" class="control-label">Current weight</label>
                 <input asp-for="CurrentWeight" class="form-control" />
                 <span asp-validation-for="CurrentWeight" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="GoalWeight" class="control-label"></label>
+                <label asp-for="GoalWeight" class="control-label">Goal weight</label>
                 <input asp-for="GoalWeight" class="form-control" />
                 <span asp-validation-for="GoalWeight" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ActivityLevel" class="control-label"></label>
-                <input asp-for="ActivityLevel" class="form-control" />
+                <label asp-for="ActivityLevel" class="control-label">Activity level</label>
+                <select asp-for="ActivityLevel" class="form-control">
+                    <option selected disabled hidden style='display: none' value=''></option>
+                    <option>Sedentary</option>
+                    <option>Lightly active</option>
+                    <option>Moderately active</option>
+                    <option>Very active</option>
+                    <option>Extra active</option>
+                </select>
                 <span asp-validation-for="ActivityLevel" class="text-danger"></span>
             </div>
-            
+
             <div class="form-group">
-                <label asp-for="IntensityOfThePlan" class="control-label"></label>
-                <input asp-for="IntensityOfThePlan" class="form-control" />
+                <label asp-for="IntensityOfThePlan" class="control-label">Intensity of the plan</label>
+                <select asp-for="IntensityOfThePlan" class="form-control">
+                    <option selected disabled hidden style='display: none' value=''></option>
+                    <option>Lose 0.5kg per week</option>
+                    <option>Lose 1kg per week</option>
+                    <option>Maintain current weight</option>
+                    <option>Gain 0.5kg per week</option>
+                    <option>Gain 1kg per week</option>
+                </select>
                 <span asp-validation-for="IntensityOfThePlan" class="text-danger"></span>
             </div>
-            
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -67,4 +86,5 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
 }
