@@ -13,8 +13,8 @@ namespace Nutrition.Models
         /// <summary>
         /// Breakfast entry 
         /// </summary>
-        private List<Food> mealItems;
-        public List<Food> MealItems
+        private List<FoodModel> mealItems;
+        public List<FoodModel> MealItems
         {
             get { return mealItems; }
             set { mealItems = value; }
@@ -122,10 +122,10 @@ namespace Nutrition.Models
         /// </summary>
         /// <param name="food">The food item which to be added in the breakfast entry.</param>
         /// <returns>Message that the food has been added.</returns>
-        public string AddFoodToMeal(Food food)
+        public string AddFoodToMeal(FoodModel food)
         {
             MealItems.Add(food);
-            MealCalories += food.TotalCalories;
+            //MealCalories += food.TotalCalories;
             return food.Name + "\nadded!";
         }
 

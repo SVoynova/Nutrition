@@ -5,98 +5,78 @@ using System.Threading.Tasks;
 
 namespace Nutrition.Models
 {
-    public class Food
+    public class FoodModel
     {
-        public int id;
         public int Id
         {
-            get { return id; }
-            set { id = value; }
+            get ;
+            set ;
         }
 
-        public string name;
         public string Name
         {
-            get { return name; }
-            set { name = value; }
+            get;
+            set;
         }
 
 
-        public string serving;
         public string Serving
         {
-            get { return serving; }
-            set { serving = value; }
+            get;
+            set;
         }
 
-        public int caloriesPerServing;
         public int CaloriesPerServing
         {
-            get { return caloriesPerServing; }
-            set { caloriesPerServing = value; }
+            get;
+            set;
         }
 
-        private int quantity;
         public int Quantity
         {
-            get { return quantity; }
-            set { quantity = value; }
+            get;
+            set;
         }
 
-        public int totalCalories;
-        public int TotalCalories
-        {
-            get { return totalCalories; }
-            set { totalCalories = CaloriesPerServing * Quantity; }
-        }
-
-
-        public int protein;
         public int Protein
         {
-            get { return protein; }
-            set { protein = value; }
+            get;
+            set;
         }
-
-        private int carbohydrates;
         public int Carbohydrates
         {
-            get { return carbohydrates; }
-            set { carbohydrates = value; }
+            get;
+            set;
         }
 
-        private int fat;
         public int Fat
         {
-            get { return fat; }
-            set { fat = value; }
+            get;
+            set;
         }
 
-        private int fibre;
         public int Fibre
         {
-            get { return fibre; }
-            set { fibre = value; }
+            get;
+            set;
         }
 
-        private int sugars;
-
+        
         public int Sugars
         {
-            get { return sugars; }
-            set { sugars = value; }
+            get;
+            set;
         }
 
-        private int sodium;
+        /*
 
         public int Sodium
         {
-            get { return sodium; }
-            set { sodium = value; }
+            get;
+            set;
         }
 
 
-        private int potassium;
         public int Potassium
         {
             get { return potassium; }
@@ -134,8 +114,9 @@ namespace Nutrition.Models
             get { return calcium; }
             set { calcium = value; }
         }
+        */
 
-        public Food()
+        public FoodModel()
         {
 
         }
