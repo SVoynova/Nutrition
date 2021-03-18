@@ -16,13 +16,126 @@ namespace Nutrition.Models
             set { date = value; }
         }
 
-        Meal breakfast = new Meal();
+        //закуската започва от тук
+        //написала съм и къде свършва по-долу
+        //копирай всичко това 
+        //постави го 3 пъти 
+        //и промени имената 1вия път - за lunch, 2- dinner, 3 - snacks
 
-        Meal lunch = new Meal();
+        /// <summary>
+        /// Breakfast entry 
+        /// </summary>
+        private List<FoodModel> breakfastItems;
+        public List<FoodModel> BreakfastItems
+        {
+            get { return breakfastItems; }
+            set { breakfastItems = value; }
+        }
 
-        Meal dinner = new Meal();
+        /// <summary>
+        /// Calories consumed for meal
+        /// </summary>
+        private int breakfastCalories;
+        public int BreakfastCalories
+        {
+            get { return breakfastCalories; }
+            set { breakfastCalories = value; }
+        }
 
-        Meal snacks = new Meal();
+        /// <summary>
+        /// 
+        /// </summary>
+        public int breakfastProtein;
+        public int BreakfastProtein
+        {
+            get { return breakfastProtein; }
+            set { breakfastProtein = value; }
+        }
+
+        private int breakfastCarbohydrates;
+        public int BreakfastCarbohydrates
+        {
+            get { return breakfastCarbohydrates; }
+            set { breakfastCarbohydrates = value; }
+        }
+
+        private int breakfastFat;
+        public int BreakfastFat
+        {
+            get { return breakfastFat; }
+            set { breakfastFat = value; }
+        }
+
+        private int breakfastFibre;
+        public int BreakfastFibre
+        {
+            get { return breakfastFibre; }
+            set { breakfastFibre = value; }
+        }
+
+        private int breakfastSugars;
+        public int BreakfastSugars
+        {
+            get { return breakfastSugars; }
+            set { breakfastSugars = value; }
+        }
+
+        private int breakfastSodium;
+        public int BreakfastSodium
+        {
+            get { return breakfastSodium; }
+            set { breakfastSodium = value; }
+        }
+
+
+        private int breakfastPotassium;
+        public int BreakfastPotassium
+        {
+            get { return breakfastPotassium; }
+            set { breakfastPotassium = value; }
+        }
+
+
+        private int breakfastcholesterol;
+        public int BreakfastCholesterol
+        {
+            get { return breakfastcholesterol; }
+            set { breakfastcholesterol = value; }
+        }
+
+
+        private int breakfastvitaminA;
+        public int BreakfastVitaminA
+        {
+            get { return breakfastvitaminA; }
+            set { breakfastvitaminA = value; }
+        }
+
+
+        private int breakfastvitaminC;
+        public int BreakfastVitaminC
+        {
+            get { return breakfastvitaminC; }
+            set { breakfastvitaminC = value; }
+        }
+
+
+        private int breakfastcalcium;
+        public int BreakfastCalcium
+        {
+            get { return breakfastcalcium; }
+            set { breakfastcalcium = value; }
+        }
+
+        //закуската свършва тук
+
+
+
+
+
+        //слагай ги над това
+
+
 
         /// <summary>
         /// Water entry in litres 
@@ -34,6 +147,24 @@ namespace Nutrition.Models
             set { water = value; }
         }
 
+        /*
+
+        /// <summary>
+        /// A method which is used to add a food item in the breakfast section.
+        /// </summary>
+        /// <param name="food">The food item which to be added in the breakfast entry.</param>
+        /// <returns>Message that the food has been added.</returns>
+        public string AddFoodToMeal(FoodModel food)
+        {
+            BreakfastItems.Add(food);
+            BreakfastCalories += food.TotalCalories;
+            return food.Name + "\nadded!";
+        }
+
+
+        
+
+        /*
         /// <summary>
         /// Calories consumed for breakfast 
         /// </summary>
@@ -168,14 +299,14 @@ namespace Nutrition.Models
         {
             get { return totalVitaminC; }
             set { totalVitaminC =
-                    breakfast.VitaminC +
-                    lunch.VitaminC +
-                    dinner.VitaminC+
-                    snacks.VitaminC;
+                    BreakfastVitaminC +
+                    LunchVitaminC +
+                    DinnerVitaminC+
+                    SnacksVitaminC;
             }
         }
 
-
+        
         private int totalCalcium;
         public int TotalCalcium
         {
@@ -187,7 +318,7 @@ namespace Nutrition.Models
                     snacks.Calcium;
             }
         }
-
+        */
         public Diary()
         {
 

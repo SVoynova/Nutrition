@@ -20,9 +20,9 @@ namespace Nutrition.Models
             get { return name; }
             set { name = value; }
         }
-        private List<Food> ingredients;
+        private List<FoodModel> ingredients;
 
-        public List<Food> Ingredients
+        public List<FoodModel> Ingredients
         {
             get { return ingredients; }
             set { ingredients = value; }
