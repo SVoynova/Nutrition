@@ -16,12 +16,6 @@ namespace Nutrition.Models
             set { date = value; }
         }
 
-        //закуската започва от тук
-        //написала съм и къде свършва по-долу
-        //копирай всичко това 
-        //постави го 3 пъти 
-        //и промени имената 1вия път - за lunch, 2- dinner, 3 - snacks
-
         /// <summary>
         /// Breakfast entry 
         /// </summary>
@@ -43,7 +37,7 @@ namespace Nutrition.Models
         }
 
         /// <summary>
-        /// 
+        /// Amount of protein contained in the meal
         /// </summary>
         public int breakfastProtein;
         public int BreakfastProtein
@@ -52,6 +46,9 @@ namespace Nutrition.Models
             set { breakfastProtein = value; }
         }
 
+        /// <summary>
+        /// Carbohydrates contained in the meal
+        /// </summary>
         private int breakfastCarbohydrates;
         public int BreakfastCarbohydrates
         {
@@ -59,6 +56,9 @@ namespace Nutrition.Models
             set { breakfastCarbohydrates = value; }
         }
 
+        /// <summary>
+        /// Fats contained in the meal
+        /// </summary>
         private int breakfastFat;
         public int BreakfastFat
         {
@@ -66,6 +66,9 @@ namespace Nutrition.Models
             set { breakfastFat = value; }
         }
 
+        /// <summary>
+        /// Fibre contained in the meal
+        /// </summary>
         private int breakfastFibre;
         public int BreakfastFibre
         {
@@ -73,6 +76,9 @@ namespace Nutrition.Models
             set { breakfastFibre = value; }
         }
 
+        /// <summary>
+        /// Sugars contained in the meal
+        /// </summary>
         private int breakfastSugars;
         public int BreakfastSugars
         {
@@ -80,6 +86,9 @@ namespace Nutrition.Models
             set { breakfastSugars = value; }
         }
 
+        /// <summary>
+        /// Sodium contained in the meal
+        /// </summary>
         private int breakfastSodium;
         public int BreakfastSodium
         {
@@ -87,7 +96,9 @@ namespace Nutrition.Models
             set { breakfastSodium = value; }
         }
 
-
+        /// <summary>
+        /// Potassium contained in the meal
+        /// </summary>
         private int breakfastPotassium;
         public int BreakfastPotassium
         {
@@ -95,47 +106,438 @@ namespace Nutrition.Models
             set { breakfastPotassium = value; }
         }
 
-
-        private int breakfastcholesterol;
+        /// <summary>
+        /// Cholesterol contained in the meal
+        /// </summary>
+        private int breakfastCholesterol;
         public int BreakfastCholesterol
         {
-            get { return breakfastcholesterol; }
-            set { breakfastcholesterol = value; }
+            get { return breakfastCholesterol; }
+            set { breakfastCholesterol = value; }
         }
 
-
-        private int breakfastvitaminA;
+        /// <summary>
+        /// Vitamin A contained in the meal
+        /// </summary>
+        private int breakfastVitaminA;
         public int BreakfastVitaminA
         {
-            get { return breakfastvitaminA; }
-            set { breakfastvitaminA = value; }
+            get { return breakfastVitaminA; }
+            set { breakfastVitaminA = value; }
         }
 
-
-        private int breakfastvitaminC;
+        /// <summary>
+        /// Vatamin C contained in the meal
+        /// </summary>
+        private int breakfastVitaminC;
         public int BreakfastVitaminC
         {
-            get { return breakfastvitaminC; }
-            set { breakfastvitaminC = value; }
+            get { return breakfastVitaminC; }
+            set { breakfastVitaminC = value; }
         }
 
-
-        private int breakfastcalcium;
+        /// <summary>
+        /// Calcium contained in the meal
+        /// </summary>
+        private int breakfastCalcium;
         public int BreakfastCalcium
         {
-            get { return breakfastcalcium; }
-            set { breakfastcalcium = value; }
+            get { return breakfastCalcium; }
+            set { breakfastCalcium = value; }
         }
 
-        //закуската свършва тук
+
+        /// <summary>
+        /// Lunch entry 
+        /// </summary>
+        private List<FoodModel> lunchItems;
+        public List<FoodModel> LunchItems
+        {
+            get { return lunchItems; }
+            set { lunchItems = value; }
+        }
+
+        /// <summary>
+        /// Calories consumed for meal
+        /// </summary>
+        private int lunchCalories;
+        public int LunchCalories
+        {
+            get { return lunchCalories; }
+            set { lunchCalories = value; }
+        }
+
+        /// <summary>
+        /// Amount of protein contained in the meal
+        /// </summary>
+        public int lunchProtein;
+        public int LunchProtein
+        {
+            get { return lunchProtein; }
+            set { lunchProtein = value; }
+        }
+
+        /// <summary>
+        /// Carbohydrates contained in the meal
+        /// </summary>
+        private int lunchCarbohydrates;
+        public int LunchCarbohydrates
+        {
+            get { return lunchCarbohydrates; }
+            set { lunchCarbohydrates = value; }
+        }
+        /// <summary>
+        /// Fats contained in the meal
+        /// </summary>
+        private int lunchFat;
+        public int LunchFat
+        {
+            get { return lunchFat; }
+            set { lunchFat = value; }
+        }
+
+        /// <summary>
+        /// Fibre contained in the meal
+        /// </summary>
+        private int lunchFibre;
+        public int LunchFibre
+        {
+            get { return lunchFibre; }
+            set { lunchFibre = value; }
+        }
+
+        /// <summary>
+        /// Sugars contained in the meal
+        /// </summary>
+        private int lunchSugars;
+        public int LunchSugars
+        {
+            get { return lunchSugars; }
+            set { lunchSugars = value; }
+        }
+
+        /// <summary>
+        /// Sodium contained in the meal
+        /// </summary>>
+        private int lunchSodium;
+        public int LunchSodium
+        {
+            get { return lunchSodium; }
+            set { lunchSodium = value; }
+        }
+
+        /// <summary>
+        /// Potassium contained in the meal
+        /// </summary>>
+        private int lunchPotassium;
+        public int LunchPotassium
+        {
+            get { return lunchPotassium; }
+            set { lunchPotassium = value; }
+        }
+
+        /// <summary>
+        /// Cholesterol contained in the meal
+        /// </summary>>
+        private int lunchCholesterol;
+        public int LunchCholesterol
+        {
+            get { return lunchCholesterol; }
+            set { lunchCholesterol = value; }
+        }
+
+        /// <summary>
+        /// Vatamin A contained in the meal
+        /// </summary>
+        private int lunchVitaminA;
+        public int LunchVitaminA
+        {
+            get { return lunchVitaminA; }
+            set { lunchVitaminA = value; }
+        }
+
+        /// <summary>
+        /// Vatamin C contained in the meal
+        /// </summary>
+        private int lunchVitaminC;
+        public int LunchVitaminC
+        {
+            get { return lunchVitaminC; }
+            set { lunchVitaminC = value; }
+        }
+
+        /// <summary>
+        /// Calcium contained in the meal
+        /// </summary>
+        private int lunchCalcium;
+        public int LunchCalcium
+        {
+            get { return lunchCalcium; }
+            set { lunchCalcium = value; }
+        }
 
 
+        /// <summary>
+        /// Dinner entry 
+        /// </summary>
+        private List<FoodModel> dinnerItems;
+        public List<FoodModel> DinnerItems
+        {
+            get { return dinnerItems; }
+            set { dinnerItems = value; }
+        }
+
+        /// <summary>
+        /// Calories consumed for meal
+        /// </summary>
+        private int dinnerCalories;
+        public int DinnerCalories
+        {
+            get { return dinnerCalories; }
+            set { dinnerCalories = value; }
+        }
+
+        /// <summary>
+        /// Amount of protein contained in the meal
+        /// </summary>
+        public int dinnerProtein;
+        public int DinnerProtein
+        {
+            get { return dinnerProtein; }
+            set { dinnerProtein = value; }
+        }
+
+        /// <summary>
+        /// Carbohydrates contained in the meal
+        /// </summary>
+        private int dinnerCarbohydrates;
+        public int DinnerCarbohydrates
+        {
+            get { return dinnerCarbohydrates; }
+            set { dinnerCarbohydrates = value; }
+        }
+
+        /// <summary>
+        /// Fats contained in the meal
+        /// </summary>
+        private int dinnerFat;
+        public int DinnerFat
+        {
+            get { return dinnerFat; }
+            set { dinnerFat = value; }
+        }
+
+        /// <summary>
+        /// Fibre contained in the meal
+        /// </summary>
+        private int dinnerFibre;
+        public int DinnerFibre
+        {
+            get { return dinnerFibre; }
+            set { dinnerFibre = value; }
+        }
+
+        /// <summary>
+        /// Sugars contained in the meal
+        /// </summary>
+        private int dinnerSugars;
+        public int DinnerSugars
+        {
+            get { return dinnerSugars; }
+            set { dinnerSugars = value; }
+        }
+
+        /// <summary>
+        /// Sodium contained in the meal
+        /// </summary>>
+        private int dinnerSodium;
+        public int DinnerSodium
+        {
+            get { return dinnerSodium; }
+            set { dinnerSodium = value; }
+        }
+
+        /// <summary>
+        /// Potassium contained in the meal
+        /// </summary>>
+        private int dinnerPotassium;
+        public int DinnerPotassium
+        {
+            get { return dinnerPotassium; }
+            set { dinnerPotassium = value; }
+        }
+
+        /// <summary>
+        /// Cholesterol contained in the meal
+        /// </summary>>
+        private int dinnerCholesterol;
+        public int DinnerCholesterol
+        {
+            get { return dinnerCholesterol; }
+            set { dinnerCholesterol = value; }
+        }
+
+        /// <summary>
+        /// Vatamin A contained in the meal
+        /// </summary>
+        private int dinnerVitaminA;
+        public int DinnerVitaminA
+        {
+            get { return dinnerVitaminA; }
+            set { dinnerVitaminA = value; }
+        }
+
+        /// <summary>
+        /// Vatamin C contained in the meal
+        /// </summary>
+        private int dinnerVitaminC;
+        public int DinnerVitaminC
+        {
+            get { return dinnerVitaminC; }
+            set { dinnerVitaminC = value; }
+        }
+
+        /// <summary>
+        /// Calcium contained in the meal
+        /// </summary>
+        private int dinnerCalcium;
+        public int DinnerCalcium
+        {
+            get { return dinnerCalcium; }
+            set { dinnerCalcium = value; }
+        }
 
 
+        /// <summary>
+        /// Snacks entry 
+        /// </summary>
+        private List<FoodModel> snacksItems;
+        public List<FoodModel> SnacksItems
+        {
+            get { return snacksItems; }
+            set { snacksItems = value; }
+        }
 
-        //слагай ги над това
+        /// <summary>
+        /// Calories consumed for meal
+        /// </summary>
+        private int snacksCalories;
+        public int SnacksCalories
+        {
+            get { return snacksCalories; }
+            set { snacksCalories = value; }
+        }
 
+        /// <summary>
+        /// Amount of protein contained in the meal
+        /// </summary>
+        public int snacksProtein;
+        public int SnacksProtein
+        {
+            get { return snacksProtein; }
+            set { snacksProtein = value; }
+        }
 
+        /// <summary>
+        /// Carbohydrates contained in the meal
+        /// </summary>
+        private int snacksCarbohydrates;
+        public int SnacksCarbohydrates
+        {
+            get { return snacksCarbohydrates; }
+            set { snacksCarbohydrates = value; }
+        }
+
+        /// <summary>
+        /// Fats contained in the meal
+        /// </summary>
+        private int snacksFat;
+        public int SnacksFat
+        {
+            get { return snacksFat; }
+            set { snacksFat = value; }
+        }
+
+        /// <summary>
+        /// Fibre contained in the meal
+        /// </summary>
+        private int snacksFibre;
+        public int SnacksFibre
+        {
+            get { return snacksFibre; }
+            set { snacksFibre = value; }
+        }
+
+        /// <summary>
+        /// Sugars contained in the meal
+        /// </summary>>
+        private int snacksSugars;
+        public int SnacksSugars
+        {
+            get { return snacksSugars; }
+            set { snacksSugars = value; }
+        }
+
+        /// <summary>
+        /// Sodium contained in the meal
+        /// </summary>>
+        private int snacksSodium;
+        public int SnacksSodium
+        {
+            get { return snacksSodium; }
+            set { snacksSodium = value; }
+        }
+
+        /// <summary>
+        /// Potassium contained in the meal
+        /// </summary>>
+        private int snacksPotassium;
+        public int SnacksPotassium
+        {
+            get { return snacksPotassium; }
+            set { snacksPotassium = value; }
+        }
+
+        /// <summary>
+        /// Cholesterol contained in the meal
+        /// </summary>>
+        private int snacksCholesterol;
+        public int SnacksCholesterol
+        {
+            get { return snacksCholesterol; }
+            set { snacksCholesterol = value; }
+        }
+
+        /// <summary>
+        /// Vatamin A contained in the meal
+        /// </summary>
+        private int snacksVitaminA;
+        public int SnacksVitaminA
+        {
+            get { return snacksVitaminA; }
+            set { snacksVitaminA = value; }
+        }
+
+        /// <summary>
+        /// Vatamin C contained in the meal
+        /// </summary>
+        private int snacksVitaminC;
+        public int SnacksVitaminC
+        {
+            get { return snacksVitaminC; }
+            set { snacksVitaminC = value; }
+        }
+
+        /// <summary>
+        /// Calcium contained in the meal
+        /// </summary>
+        private int snacksCalcium;
+        public int SnacksCalcium
+        {
+            get { return snacksCalcium; }
+            set { snacksCalcium = value; }
+        }
+        
 
         /// <summary>
         /// Water entry in litres 
