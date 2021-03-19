@@ -4,9 +4,9 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>User</h4>
+<center>
+    <h1>Create a profile</h1>
+</center>
 
 <hr />
 <div class="row">
@@ -22,8 +22,8 @@
                 <label asp-for="Sex" class="control-label">Sex</label>
                 <select asp-for="Sex" class="form-control">
                     <option selected disabled hidden style='display: none' value=''></option>
-                    <option>Male</option>
-                    <option>Female</option>
+                    <option>male</option>
+                    <option>female</option>
                 </select>
                 <span asp-validation-for="Sex" class="text-danger"></span>
             </div>

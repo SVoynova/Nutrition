@@ -4,8 +4,9 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Your information</h1>
-
+<center>
+    <h1>Your information</h1>
+</center>
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -13,28 +14,44 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                <center>
+                    Name
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Sex)
+                <center>
+                    Sex
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Age)
+                <center>
+                    Age
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Height)
+                <center>
+                    Height
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CurrentWeight)
+                <center>
+                    Current weight
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.GoalWeight)
+                <center>
+                    Goal weight
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ActivityLevel)
+                <center>
+                    Activity level
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IntensityOfThePlan)
+                <center>
+                    Intensity of the plan
+                </center>
             </th>
             <!--
     <th>
@@ -98,28 +115,44 @@
     @foreach (var item in Model) {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Name)
+                    <center>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </center>
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Sex)
+                    <center>
+                        @Html.DisplayFor(modelItem => item.Sex)
+                    </center>
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Age)
+                    <center>
+                        @Html.DisplayFor(modelItem => item.Age)
+                    </center>
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Height)
+                    <center>
+                        @Html.DisplayFor(modelItem => item.Height)
+                    </center>
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.CurrentWeight)
+                    <center>
+                        @Html.DisplayFor(modelItem => item.CurrentWeight)
+                    </center>
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.GoalWeight)
+                    <center>
+                        @Html.DisplayFor(modelItem => item.GoalWeight)
+                    </center>
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.ActivityLevel)
+                    <center>
+                        @Html.DisplayFor(modelItem => item.ActivityLevel)
+                    </center>
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.IntensityOfThePlan)
+                    <center>
+                        @Html.DisplayFor(modelItem => item.IntensityOfThePlan)
+                    </center>
                 </td>
 
                 <!--
@@ -177,6 +210,7 @@
             </td>
     -->
                 <td>
+
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                     <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                     <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
